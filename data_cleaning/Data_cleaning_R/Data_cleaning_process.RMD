@@ -167,7 +167,8 @@ output:
 # data <- subset(data, ride_id != "9F438AD0AB380E3F")
 ```
 
-#### After observing the rows with NaN values on the end or start station data, it was detected that about 13% of the data was affected, at this pointI analysed the diference on indicators after and before of the drop of this NaN, the conlcusion was that the drop of this info only affected statistically the data in terms of the type of bike used, which is not a variable relevant for this study, therefore I dicided to drop the NaN values. 
+#### After observing the rows with NaN values on the end or start station data, it was detected that about 13% of the data was affected, at this point I analysed the difference between indicators after and before of the drop of these NaN, the conlcusion was that the drop of this info only affected statistically the data in terms of the type of bike used, which is not a variable relevant for this study, therefore I decided to drop the NaN values. 
+
 
 
 ![### Stats with NaN](./Stats_data_with_NaN_stations.png) 
@@ -195,7 +196,7 @@ output:
 # write.csv(data_no_NaN,"D:\\data_clean_final.csv", row.names = FALSE)
 ```
 
-### Apendix
+### Appendix
 
 ```{r}
 #Check for NAN values across columns. 
