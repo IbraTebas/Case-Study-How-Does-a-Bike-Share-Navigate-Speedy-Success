@@ -1,0 +1,463 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+%
+\documentclass[
+]{article}
+\usepackage{amsmath,amssymb}
+\usepackage{lmodern}
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math}
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{xcolor}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
+\hypersetup{
+  hidelinks,
+  pdfcreator={LaTeX via pandoc}}
+\urlstyle{same} % disable monospaced font for URLs
+\usepackage[margin=1in]{geometry}
+\usepackage{color}
+\usepackage{fancyvrb}
+\newcommand{\VerbBar}{|}
+\newcommand{\VERB}{\Verb[commandchars=\\\{\}]}
+\DefineVerbatimEnvironment{Highlighting}{Verbatim}{commandchars=\\\{\}}
+% Add ',fontsize=\small' for more characters per line
+\usepackage{framed}
+\definecolor{shadecolor}{RGB}{248,248,248}
+\newenvironment{Shaded}{\begin{snugshade}}{\end{snugshade}}
+\newcommand{\AlertTok}[1]{\textcolor[rgb]{0.94,0.16,0.16}{#1}}
+\newcommand{\AnnotationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\AttributeTok}[1]{\textcolor[rgb]{0.77,0.63,0.00}{#1}}
+\newcommand{\BaseNTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\BuiltInTok}[1]{#1}
+\newcommand{\CharTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\CommentTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
+\newcommand{\CommentVarTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\ConstantTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\ControlFlowTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
+\newcommand{\DataTypeTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{#1}}
+\newcommand{\DecValTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\DocumentationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\ErrorTok}[1]{\textcolor[rgb]{0.64,0.00,0.00}{\textbf{#1}}}
+\newcommand{\ExtensionTok}[1]{#1}
+\newcommand{\FloatTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\FunctionTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\ImportTok}[1]{#1}
+\newcommand{\InformationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\KeywordTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
+\newcommand{\NormalTok}[1]{#1}
+\newcommand{\OperatorTok}[1]{\textcolor[rgb]{0.81,0.36,0.00}{\textbf{#1}}}
+\newcommand{\OtherTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{#1}}
+\newcommand{\PreprocessorTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
+\newcommand{\RegionMarkerTok}[1]{#1}
+\newcommand{\SpecialCharTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\SpecialStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\StringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\VariableTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\VerbatimStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\WarningTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\usepackage{graphicx}
+\makeatletter
+\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
+\makeatother
+% Scale images if necessary, so that they will not overflow the page
+% margins by default, and it is still possible to overwrite the defaults
+% using explicit options in \includegraphics[width, height, ...]{}
+\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+% Set default figure placement to htbp
+\makeatletter
+\def\fps@figure{htbp}
+\makeatother
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{-\maxdimen} % remove section numbering
+\ifLuaTeX
+  \usepackage{selnolig}  % disable illegal ligatures
+\fi
+
+\author{}
+\date{\vspace{-2.5em}}
+
+\begin{document}
+
+\hypertarget{journal-data-collection-validation-and-cleaning}{%
+\section{Journal data collection, validation and
+cleaning}\label{journal-data-collection-validation-and-cleaning}}
+
+\hypertarget{data-collection}{%
+\paragraph{\texorpdfstring{\emph{Data
+collection}}{Data collection}}\label{data-collection}}
+
+\hypertarget{downloaded-the-data-from-httpsdivvy-tripdata.s3.amazonaws.comindex.html}{%
+\subparagraph{\texorpdfstring{- Downloaded the data from
+\url{https://divvy-tripdata.s3.amazonaws.com/index.html}}{- Downloaded the data from https://divvy-tripdata.s3.amazonaws.com/index.html}}\label{downloaded-the-data-from-httpsdivvy-tripdata.s3.amazonaws.comindex.html}}
+
+\hypertarget{due-to-some-of-the-files-being-greater-in-size-than-100mb-i-used-a-gnu-general-public-license-version-3.0-gplv3-free-huge-csv-splitter-software-to-create-files-all-lesser-than-100-mb.}{%
+\subparagraph{\texorpdfstring{- Due to some of the files being greater
+in size than 100MB, I used a GNU General Public License version 3.0
+(GPLv3) ``Free Huge CSV Splitter'' software to create files all lesser
+than 100 MB.
+}{- Due to some of the files being greater in size than 100MB, I used a GNU General Public License version 3.0 (GPLv3) ``Free Huge CSV Splitter'' software to create files all lesser than 100 MB.  }}\label{due-to-some-of-the-files-being-greater-in-size-than-100mb-i-used-a-gnu-general-public-license-version-3.0-gplv3-free-huge-csv-splitter-software-to-create-files-all-lesser-than-100-mb.}}
+
+\hypertarget{data-processing}{%
+\paragraph{\texorpdfstring{\emph{Data
+Processing}}{Data Processing}}\label{data-processing}}
+
+\hypertarget{i-have-obtained-17-files-in-total-i-use-the-below-script-in-python-to-add-the-headers-on-the-split-files-the-split-files-withouth-headers-ended-with-a-ii-notation}{%
+\subparagraph{I have obtained 17 files in total, I use the below script
+in python to add the headers on the split files, the split files
+withouth headers ended with a `II'
+notation:}\label{i-have-obtained-17-files-in-total-i-use-the-below-script-in-python-to-add-the-headers-on-the-split-files-the-split-files-withouth-headers-ended-with-a-ii-notation}}
+
+import pandas as pd import os directory = `./no\_names/' tester =
+pd.read\_csv(`TESTER.csv') names = list(tester.columns) for filname in
+os.listdir(directory): temp = str(filname) df = pd.read\_csv(directory +
+str(filname)) df.columns = names df.to\_csv(`headed\_\{\}'.format(temp),
+index = False)
+
+\hypertarget{i-have-uploaded-the-csv-files-to-a-bigquery-project.-i-have-executed-a-query-to-do-union-all-of-the-tables-and-store-the-result-in-a-csv-file-selecting-the-option-for-not-limit-in-size-on-the-save-file}{%
+\paragraph{I have uploaded the csv files to a BigQuery Project. I have
+executed a Query to do ``Union ALL'' of the tables and store the result
+in a csv file, selecting the option for not limit in size on the save
+file}\label{i-have-uploaded-the-csv-files-to-a-bigquery-project.-i-have-executed-a-query-to-do-union-all-of-the-tables-and-store-the-result-in-a-csv-file-selecting-the-option-for-not-limit-in-size-on-the-save-file}}
+
+SELECT * FROM \texttt{tidal-tower-348213.Trips\_data.data\_2021\_04}
+UNION ALL SELECT * FROM
+\texttt{tidal-tower-348213.Trips\_data.data\_2021\_05} UNION ALL SELECT
+* FROM \texttt{tidal-tower-348213.Trips\_data.data\_2021\_06\_I} UNION
+ALL SELECT * FROM
+\texttt{tidal-tower-348213.Trips\_data.data\_2021\_06\_II} UNION ALL
+SELECT * FROM \texttt{tidal-tower-348213.Trips\_data.data\_2021\_07\_I}
+UNION ALL SELECT * FROM
+\texttt{tidal-tower-348213.Trips\_data.data\_2021\_07\_II} UNION ALL
+SELECT * FROM \texttt{tidal-tower-348213.Trips\_data.data\_2021\_08\_I}
+UNION ALL SELECT * FROM
+\texttt{tidal-tower-348213.Trips\_data.data\_2021\_08\_II} UNION ALL
+SELECT * FROM \texttt{tidal-tower-348213.Trips\_data.data\_2021\_09\_I}
+UNION ALL SELECT * FROM
+\texttt{tidal-tower-348213.Trips\_data.data\_2021\_09\_II} UNION ALL
+SELECT * FROM \texttt{tidal-tower-348213.Trips\_data.data\_2021\_10\_I}
+UNION ALL SELECT * FROM
+\texttt{tidal-tower-348213.Trips\_data.data\_2021\_10\_II} UNION ALL
+SELECT * FROM \texttt{tidal-tower-348213.Trips\_data.data\_2021\_11}
+UNION ALL SELECT * FROM
+\texttt{tidal-tower-348213.Trips\_data.data\_2021\_12} UNION ALL SELECT
+* FROM \texttt{tidal-tower-348213.Trips\_data.data\_2022\_01} UNION ALL
+SELECT * FROM \texttt{tidal-tower-348213.Trips\_data.data\_2022\_02}
+UNION ALL SELECT * FROM
+\texttt{tidal-tower-348213.Trips\_data.data\_2022\_03}
+
+\hypertarget{data-cleaning-in-r}{%
+\subsubsection{- Data Cleaning in R}\label{data-cleaning-in-r}}
+
+\hypertarget{lets-start-by-loading-the-library-and-installing-packages-and-then-to-load-the-data-stored-on-the-.csv-file-on-the-above-query.}{%
+\paragraph{Let's start by loading the library and installing packages,
+and then to load the data stored on the .CSV file on the above
+query.}\label{lets-start-by-loading-the-library-and-installing-packages-and-then-to-load-the-data-stored-on-the-.csv-file-on-the-above-query.}}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\# install.packages("leaflet")}
+\CommentTok{\# install.packages(\textquotesingle{}geosphere\textquotesingle{})}
+\CommentTok{\# install.packages(\textquotesingle{}matrixStats\textquotesingle{})}
+\CommentTok{\# install.packages(\textquotesingle{}dplyr\textquotesingle{})}
+\CommentTok{\# install.packages(\textquotesingle{}plyr\textquotesingle{})}
+\CommentTok{\# install.packages(\textquotesingle{}vtable\textquotesingle{})}
+\CommentTok{\# }
+\FunctionTok{library}\NormalTok{(dplyr)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## 
+## Attaching package: 'dplyr'
+\end{verbatim}
+
+\begin{verbatim}
+## The following objects are masked from 'package:stats':
+## 
+##     filter, lag
+\end{verbatim}
+
+\begin{verbatim}
+## The following objects are masked from 'package:base':
+## 
+##     intersect, setdiff, setequal, union
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{library}\NormalTok{(leaflet)}
+\FunctionTok{library}\NormalTok{(tidyverse)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## -- Attaching packages --------------------------------------- tidyverse 1.3.1 --
+\end{verbatim}
+
+\begin{verbatim}
+## v ggplot2 3.3.5     v purrr   0.3.4
+## v tibble  3.1.6     v stringr 1.4.0
+## v tidyr   1.2.0     v forcats 0.5.1
+## v readr   2.1.2
+\end{verbatim}
+
+\begin{verbatim}
+## -- Conflicts ------------------------------------------ tidyverse_conflicts() --
+## x dplyr::filter() masks stats::filter()
+## x dplyr::lag()    masks stats::lag()
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{library}\NormalTok{(geosphere)}
+\FunctionTok{library}\NormalTok{(matrixStats)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## 
+## Attaching package: 'matrixStats'
+\end{verbatim}
+
+\begin{verbatim}
+## The following object is masked from 'package:dplyr':
+## 
+##     count
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{data }\OtherTok{\textless{}{-}} \FunctionTok{read.csv}\NormalTok{(}\StringTok{"data\_12\_months.csv"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\hypertarget{eliminated-duplicated-rows-dataframe-rows-count-down-from-5917935-to-5386302.}{%
+\paragraph{-Eliminated duplicated rows: Dataframe rows count down from
+5,917,935 to
+5,386,302.}\label{eliminated-duplicated-rows-dataframe-rows-count-down-from-5917935-to-5386302.}}
+
+\hypertarget{eliminated-rows-with-no-end-coordinates-rows-down-from-5386302-to-5381853.}{%
+\paragraph{-Eliminated rows with no ``end coordinates'': rows down from
+5,386,302 to
+5,381,853.}\label{eliminated-rows-with-no-end-coordinates-rows-down-from-5386302-to-5381853.}}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{data }\OtherTok{\textless{}{-}}\NormalTok{ data }\SpecialCharTok{\%\textgreater{}\%}
+  \FunctionTok{distinct}\NormalTok{(ride\_id, }\AttributeTok{.keep\_all =} \ConstantTok{TRUE}\NormalTok{) }\SpecialCharTok{\%\textgreater{}\%}                       
+  \FunctionTok{drop\_na}\NormalTok{(end\_lat)        }
+\end{Highlighting}
+\end{Shaded}
+
+\hypertarget{extracted-date-and-time-for-start-and-end-in-different-columns-remove-started_at-and-ended_at-columns-added-a-column-with-weekday-both-numeric-monday-1-etc-and-abreviated-as-a-string}{%
+\paragraph{Extracted date and time for start and end in different
+columns, remove started\_at and ended\_at columns, Added a column with
+weekday both numeric (Monday = 1, etc) and abreviated as a
+string}\label{extracted-date-and-time-for-start-and-end-in-different-columns-remove-started_at-and-ended_at-columns-added-a-column-with-weekday-both-numeric-monday-1-etc-and-abreviated-as-a-string}}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\#extract date and time in separate columns at start and end}
+\NormalTok{data}\SpecialCharTok{$}\NormalTok{start\_time}\OtherTok{\textless{}{-}} \FunctionTok{format}\NormalTok{(}\FunctionTok{as.POSIXct}\NormalTok{(                          }
+\NormalTok{data}\SpecialCharTok{$}\NormalTok{started\_at),}\AttributeTok{format =} \StringTok{"\%H:\%M:\%S"}\NormalTok{)}
+\NormalTok{data}\SpecialCharTok{$}\NormalTok{start\_date }\OtherTok{\textless{}{-}} \FunctionTok{as.Date}\NormalTok{ (data}\SpecialCharTok{$}\NormalTok{started\_at)}
+
+\NormalTok{data}\SpecialCharTok{$}\NormalTok{end\_time}\OtherTok{\textless{}{-}} \FunctionTok{format}\NormalTok{(}\FunctionTok{as.POSIXct}\NormalTok{(}
+\NormalTok{data}\SpecialCharTok{$}\NormalTok{ended\_at),}\AttributeTok{format =} \StringTok{"\%H:\%M:\%S"}\NormalTok{)}
+\NormalTok{data}\SpecialCharTok{$}\NormalTok{end\_date }\OtherTok{\textless{}{-}} \FunctionTok{as.Date}\NormalTok{ (data}\SpecialCharTok{$}\NormalTok{ended\_at)}
+
+\CommentTok{\#add the day of the week                                                                                         }
+\NormalTok{data}\SpecialCharTok{$}\NormalTok{weekday\_started }\OtherTok{=} \FunctionTok{format}\NormalTok{(data}\SpecialCharTok{$}\NormalTok{start\_date, }\AttributeTok{format =} \StringTok{"\%a"}\NormalTok{)                                }\CommentTok{\#*as a string abbreviated}
+\NormalTok{data}\SpecialCharTok{$}\NormalTok{weekday\_started\_int }\OtherTok{=} \FunctionTok{as.numeric}\NormalTok{(}\FunctionTok{format}\NormalTok{(data}\SpecialCharTok{$}\NormalTok{start\_date, }\AttributeTok{format =} \StringTok{"\%u"}\NormalTok{))                }\CommentTok{\#* as an integer, Monday = 1   }
+\NormalTok{data}\SpecialCharTok{$}\NormalTok{weekday\_ended }\OtherTok{=} \FunctionTok{format}\NormalTok{(data}\SpecialCharTok{$}\NormalTok{end\_date, }\AttributeTok{format =} \StringTok{"\%a"}\NormalTok{) }
+\NormalTok{data}\SpecialCharTok{$}\NormalTok{weekday\_ended\_int }\OtherTok{=} \FunctionTok{as.numeric}\NormalTok{(}\FunctionTok{format}\NormalTok{(data}\SpecialCharTok{$}\NormalTok{end\_date, }\AttributeTok{format =} \StringTok{"\%u"}\NormalTok{))                    }\CommentTok{\#idem}
+
+\CommentTok{\#calculate duration}
+\NormalTok{data}\SpecialCharTok{$}\NormalTok{duration\_trip\_in\_mins }\OtherTok{\textless{}{-}} \FunctionTok{difftime}\NormalTok{(data}\SpecialCharTok{$}\NormalTok{ended\_at, data}\SpecialCharTok{$}\NormalTok{started\_at, }\AttributeTok{units =} \StringTok{"mins"}\NormalTok{) }\CommentTok{\#let\textquotesingle{}s check some stats}
+\FunctionTok{mean}\NormalTok{(data}\SpecialCharTok{$}\NormalTok{duration\_trip\_in\_mins)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## Time difference of 20.31966 mins
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{max}\NormalTok{(data}\SpecialCharTok{$}\NormalTok{duration\_trip\_in\_mins)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## Time difference of 55944.15 mins
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{min}\NormalTok{(data}\SpecialCharTok{$}\NormalTok{duration\_trip\_in\_mins)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## Time difference of -58.03333 mins
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\#removed the date columns with combination of day and time}
+\NormalTok{data }\OtherTok{\textless{}{-}} \FunctionTok{subset}\NormalTok{(data, }\AttributeTok{select =} \SpecialCharTok{{-}}\FunctionTok{c}\NormalTok{(started\_at, ended\_at))   }
+\end{Highlighting}
+\end{Shaded}
+
+\hypertarget{it-is-observable-that-the-data-duration-seems-to-have-outliers-some-negative-differences-and-values-that-are-not-coherent-in-terms-of-trip-duration-for-this-kind-of-servcie-this-woudl-be-process-later-on-to-make-sure-the-data-is-clean-and-consistent.}{%
+\paragraph{It is observable that the data duration seems to have
+outliers, some negative differences and values that are not coherent in
+terms of trip duration for this kind of servcie, this woudl be process
+later on to make sure the data is clean and
+consistent.}\label{it-is-observable-that-the-data-duration-seems-to-have-outliers-some-negative-differences-and-values-that-are-not-coherent-in-terms-of-trip-duration-for-this-kind-of-servcie-this-woudl-be-process-later-on-to-make-sure-the-data-is-clean-and-consistent.}}
+
+\hypertarget{creation-of-the-haversine-function-to-calculate-the-distances-in-km-between-two-points-given-by-their-geographical-coordinates.}{%
+\paragraph{Creation of the `haversine' function, to calculate the
+distances in Km between two points given by their geographical
+coordinates.}\label{creation-of-the-haversine-function-to-calculate-the-distances-in-km-between-two-points-given-by-their-geographical-coordinates.}}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{haversine}\OtherTok{\textless{}{-}} \ControlFlowTok{function}\NormalTok{(long1, lat1, long2, lat2) \{}
+  
+  \FunctionTok{stopifnot}\NormalTok{(}\FunctionTok{is.numeric}\NormalTok{(long1),}
+            \FunctionTok{is.numeric}\NormalTok{(lat1),}
+            \FunctionTok{is.numeric}\NormalTok{(long2),}
+            \FunctionTok{is.numeric}\NormalTok{(lat2),}
+\NormalTok{            long1 }\SpecialCharTok{\textgreater{}} \SpecialCharTok{{-}}\DecValTok{180}\NormalTok{,}
+\NormalTok{            long1 }\SpecialCharTok{\textless{}} \DecValTok{180}\NormalTok{,}
+\NormalTok{            lat1 }\SpecialCharTok{\textgreater{}} \SpecialCharTok{{-}}\DecValTok{180}\NormalTok{,}
+\NormalTok{            lat1 }\SpecialCharTok{\textless{}} \DecValTok{180}\NormalTok{,}
+\NormalTok{            long2 }\SpecialCharTok{\textgreater{}} \SpecialCharTok{{-}}\DecValTok{180}\NormalTok{,}
+\NormalTok{            long2 }\SpecialCharTok{\textless{}} \DecValTok{180}\NormalTok{,}
+\NormalTok{            lat2 }\SpecialCharTok{\textgreater{}} \SpecialCharTok{{-}}\DecValTok{180}\NormalTok{,}
+\NormalTok{            lat2 }\SpecialCharTok{\textless{}} \DecValTok{180}
+\NormalTok{  )}
+  
+\NormalTok{  long1 }\OtherTok{\textless{}{-}}\NormalTok{ long1}\SpecialCharTok{*}\NormalTok{pi}\SpecialCharTok{/}\DecValTok{180}
+\NormalTok{  lat1 }\OtherTok{\textless{}{-}}\NormalTok{ lat1}\SpecialCharTok{*}\NormalTok{pi}\SpecialCharTok{/}\DecValTok{180}
+\NormalTok{  long2 }\OtherTok{\textless{}{-}}\NormalTok{ long2}\SpecialCharTok{*}\NormalTok{pi}\SpecialCharTok{/}\DecValTok{180}
+\NormalTok{  lat2 }\OtherTok{\textless{}{-}}\NormalTok{ lat2}\SpecialCharTok{*}\NormalTok{pi}\SpecialCharTok{/}\DecValTok{180}
+  
+\NormalTok{  R }\OtherTok{\textless{}{-}} \DecValTok{6371} \CommentTok{\# Earth mean radius [km]}
+\NormalTok{  delta.long }\OtherTok{\textless{}{-}}\NormalTok{ (long2 }\SpecialCharTok{{-}}\NormalTok{ long1)}
+\NormalTok{  delta.lat }\OtherTok{\textless{}{-}}\NormalTok{ (lat2 }\SpecialCharTok{{-}}\NormalTok{ lat1)}
+\NormalTok{  a }\OtherTok{\textless{}{-}} \FunctionTok{sin}\NormalTok{(delta.lat}\SpecialCharTok{/}\DecValTok{2}\NormalTok{)}\SpecialCharTok{\^{}}\DecValTok{2} \SpecialCharTok{+} \FunctionTok{cos}\NormalTok{(lat1) }\SpecialCharTok{*} \FunctionTok{cos}\NormalTok{(lat2) }\SpecialCharTok{*} \FunctionTok{sin}\NormalTok{(delta.long}\SpecialCharTok{/}\DecValTok{2}\NormalTok{)}\SpecialCharTok{\^{}}\DecValTok{2}
+\NormalTok{  c }\OtherTok{\textless{}{-}} \DecValTok{2} \SpecialCharTok{*} \FunctionTok{asin}\NormalTok{(}\FunctionTok{min}\NormalTok{(}\DecValTok{1}\NormalTok{,}\FunctionTok{sqrt}\NormalTok{(a)))}
+\NormalTok{  d }\OtherTok{=}\NormalTok{ R }\SpecialCharTok{*}\NormalTok{ c}
+  \FunctionTok{return}\NormalTok{(d) }\CommentTok{\# Distance in km}
+\NormalTok{\}}
+\end{Highlighting}
+\end{Shaded}
+
+\hypertarget{adding-a-column-for-distance-in-km-per-trip.}{%
+\paragraph{Adding a column for distance in km per
+trip.}\label{adding-a-column-for-distance-in-km-per-trip.}}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{data}\SpecialCharTok{$}\NormalTok{distance\_in\_km }\OtherTok{\textless{}{-}} \FunctionTok{with}\NormalTok{(data, }\FunctionTok{mapply}\NormalTok{(haversine, }\AttributeTok{lat1=}\NormalTok{data}\SpecialCharTok{$}\NormalTok{start\_lat, }\AttributeTok{long1=}\NormalTok{data}\SpecialCharTok{$}\NormalTok{start\_lng, }\AttributeTok{lat2=}\NormalTok{data}\SpecialCharTok{$}\NormalTok{end\_lat, }\AttributeTok{long2=}\NormalTok{data}\SpecialCharTok{$}\NormalTok{end\_lng))}
+\end{Highlighting}
+\end{Shaded}
+
+\hypertarget{lets-summarise-the-numerical-variables-to-explore-for-outliers-based-on-this-lets-filtter-the-data-to-observe-this-outliers.}{%
+\paragraph{Let's summarise the numerical variables to explore for
+outliers, based on this, lets filtter the data to observe this
+outliers.}\label{lets-summarise-the-numerical-variables-to-explore-for-outliers-based-on-this-lets-filtter-the-data-to-observe-this-outliers.}}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{data }\SpecialCharTok{\%\textgreater{}\%} \FunctionTok{summarise\_if}\NormalTok{(is.numeric, max)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+##         X start_lat start_lng  end_lat end_lng weekday_started_int
+## 1 5917935  45.63503 -73.79648 42.16812  -87.49                   7
+##   weekday_ended_int distance_in_km
+## 1                 7       1189.522
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{data }\SpecialCharTok{\%\textgreater{}\%}\FunctionTok{summarise\_if}\NormalTok{(is.numeric, min)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+##   X start_lat start_lng end_lat end_lng weekday_started_int weekday_ended_int
+## 1 1     41.64    -87.84   41.39  -88.97                   1                 1
+##   distance_in_km
+## 1              0
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{outliers\_distance\_max }\OtherTok{\textless{}{-}}\NormalTok{ data }\SpecialCharTok{\%\textgreater{}\%} \FunctionTok{filter}\NormalTok{(distance\_in\_km }\SpecialCharTok{\textgreater{}} \DecValTok{1000}\NormalTok{)}
+\NormalTok{outliers\_distance\_and\_duration }\OtherTok{\textless{}{-}}\NormalTok{ data }\SpecialCharTok{\%\textgreater{}\%} \FunctionTok{filter}\NormalTok{(distance\_in\_km }\SpecialCharTok{==} \DecValTok{0} \SpecialCharTok{\&}\NormalTok{ duration\_trip\_in\_mins }\SpecialCharTok{\textless{}} \DecValTok{5}\NormalTok{)}\CommentTok{\# we will remove the trips that the bike is docked in the same station and less than 5 min have passed. Candidate to abandon trip.}
+\NormalTok{Outlier\_graph }\OtherTok{\textless{}{-}}\NormalTok{data }\SpecialCharTok{\%\textgreater{}\%} \FunctionTok{filter}\NormalTok{(ride\_id }\SpecialCharTok{==} \StringTok{"9F438AD0AB380E3F"}\NormalTok{ )  }\CommentTok{\#ride id detected as an outlier on Tableau when checking end lat and lng.}
+\NormalTok{outlier\_time\_more\_than\_5\_hrs }\OtherTok{\textless{}{-}}\NormalTok{ data }\SpecialCharTok{\%\textgreater{}\%} \FunctionTok{filter}\NormalTok{(duration\_trip\_in\_mins }\SpecialCharTok{\textgreater{}} \DecValTok{300}\NormalTok{)  }\CommentTok{\#check trip duration greater than 5 hours}
+\NormalTok{outlier\_time\_null\_time\_or\_negative }\OtherTok{\textless{}{-}}\NormalTok{ data }\SpecialCharTok{\%\textgreater{}\%} \FunctionTok{filter}\NormalTok{(duration\_trip\_in\_mins }\SpecialCharTok{\textless{}} \DecValTok{0}\NormalTok{ ) }\CommentTok{\# check negative duration }
+\end{Highlighting}
+\end{Shaded}
+
+\hypertarget{removal-of-outliers}{%
+\paragraph{Removal of outliers}\label{removal-of-outliers}}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\#Removal of the correspondent rows for the outliers}
+\NormalTok{data }\OtherTok{\textless{}{-}} \FunctionTok{subset}\NormalTok{(data, distance\_in\_km }\SpecialCharTok{!=} \DecValTok{0} \SpecialCharTok{|}\NormalTok{ duration\_trip\_in\_mins }\SpecialCharTok{\textgreater{}} \DecValTok{4}\NormalTok{)     }\CommentTok{\#removal of 131855 rows}
+\NormalTok{data }\OtherTok{\textless{}{-}} \FunctionTok{subset}\NormalTok{(data, distance\_in\_km }\SpecialCharTok{\textless{}} \DecValTok{1000}\NormalTok{)  }\CommentTok{\#distance more than 1000KM, tested max and it went down to 114.3836}
+\NormalTok{data }\OtherTok{\textless{}{-}} \FunctionTok{subset}\NormalTok{(data, duration\_trip\_in\_mins }\SpecialCharTok{\textless{}=} \DecValTok{300} \SpecialCharTok{\&}\NormalTok{ duration\_trip\_in\_mins }\SpecialCharTok{\textgreater{}=}\DecValTok{0}\NormalTok{) }\CommentTok{\#removal of  9419 rows with more of 5 hours duration, 1161 of them more than a day.}
+\NormalTok{data }\OtherTok{\textless{}{-}} \FunctionTok{subset}\NormalTok{(data, ride\_id }\SpecialCharTok{!=} \StringTok{"9F438AD0AB380E3F"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\hypertarget{after-observing-the-rows-with-nan-values-on-the-end-or-start-station-data-it-was-detected-that-about-13-of-the-data-was-affected-at-this-pointi-analysed-the-diference-on-indicators-after-and-before-of-the-drop-of-this-nan-the-conlcusion-was-that-the-drop-of-this-info-only-affected-statistically-the-data-in-terms-of-the-type-of-bike-used-which-is-not-a-variable-relevant-for-this-study-therefore-i-dicided-to-drop-the-nan-values.}{%
+\paragraph{After observing the rows with NaN values on the end or start
+station data, it was detected that about 13\% of the data was affected,
+at this pointI analysed the diference on indicators after and before of
+the drop of this NaN, the conlcusion was that the drop of this info only
+affected statistically the data in terms of the type of bike used, which
+is not a variable relevant for this study, therefore I dicided to drop
+the NaN
+values.}\label{after-observing-the-rows-with-nan-values-on-the-end-or-start-station-data-it-was-detected-that-about-13-of-the-data-was-affected-at-this-pointi-analysed-the-diference-on-indicators-after-and-before-of-the-drop-of-this-nan-the-conlcusion-was-that-the-drop-of-this-info-only-affected-statistically-the-data-in-terms-of-the-type-of-bike-used-which-is-not-a-variable-relevant-for-this-study-therefore-i-dicided-to-drop-the-nan-values.}}
+
+! {[}Alt text{]} (/Stats\_data\_with\_NaN\_stations.png) ! {[}Alt
+text{]} (/stats\_data\_without\_NaN.png)
+
+\end{document}
