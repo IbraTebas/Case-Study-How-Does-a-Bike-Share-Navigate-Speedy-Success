@@ -1,12 +1,1 @@
-{
-  "type": "service_account",
-  "project_id": "tidal-tower-348213",
-  "private_key_id": "6ca6b4c9b7c4a143cf835de1cbe05da2fabc9aba",
-  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQDfezLYcD8/gt4Z\nBk2+ysM5AtXepEXGeNLf0FxfmsUJ3BnVWi1l+cUm4W7n3c5b0aDh0fJOOHlXKTxj\nZsGWpi/4EOLLgWt5wdRoJEqpeCbHneBHaqewXG2pDW/Grnpn9yKzW8VNerP3cjgO\n00okFtQ4yYeaNvh51H7Pa/T3Rwvmpo2uvhn5CQOba46iY2UdFDzCyWbbln8gR8fa\nMqEwEI1YUkDKIddumZOyZyDHe5WMtQHt1gIj7fgkFn3c3risGDLP8VxUZC5wClMo\nGgbZ/gW2Kw2ASB6MnxSodKSNJL9M6grBsukb2FVno7p4ZOBMmWUK8ACQi+6I4s/q\nqA051VnNAgMBAAECggEANYxQTla0/PuXSpE9Wzg752Lzyn17n5cPViQXoivURyzH\nPt008BCVSh/tol6+JbeY0EstP0teXcFqcBnszHNlHpAzO5Z24W2NfuelQS6iQiXk\n2c/nPsWi3AU1cXqYp2Uq2iWk5NAAI8wpPPopM3UJ5FJ7rLq7tntxaDOCtqZ+JkVz\nErRifpf24GOSk7UJxETPNT4y2gy1sSdg3e5FMZnByTEPA+x7/lFrxg47HEnP7u76\nM1F8D18wSDeKOXxi+e/yXufv2on9uIg9Wo1N9lneGu3aMTWrGug6cdbwwmYIxIFi\nKfKuh1o1Ot4YZ7zL+v6P1ih8sbAAZ9Ln1Qhwgb7P0QKBgQD2wGZOvNXC6EiC/Uzt\nVAFxPiQvnzF9Thflh2Gwa4jyNFLJl6/3Fnp8GwjWH6Mtp1dvHVWTgWqoQ/v6+dfA\nFZEqx1t0eaSpCoGraO9H02HzURAMc3pyQJUJ351raDV0uCkRshgZVSCc5zE557ZM\nLrmQ0Ov/tMvjceB5Y/mP5+vpcQKBgQDn24S7bzgXSCyDfb16U+MCU2jiHgSn/018\nGDLlL92APAJ+lh0GH8P+OrGEOy7oF/xdSwb2EamVV17U0nIn1L4al5Ohn9Nm0jfb\nypWOEC+c7GhYNrDFoCZesRDLGyHZsuYCU9hHsRa2lLbFpBc3PdJ66iYxGjWfX/kx\no5GrnqZoHQKBgQDoP53MHJcCtkmR6UKf20LkSL4ciLU3IOsDIpMDT6P9fNwzXO/G\nHMU6zONbTznyvaBhOHYUuWofaKXiy4iUBni1kCD3l4sxhG8aXFFkBIUcVL9LSOIG\nad0eBviPYO13p+MYAc4HAgYJSN4fh4YhXJVSxiJrcsu5j7Td7Qi3t25oMQKBgDVE\n0QUDM37d3SREslC1jzVMlo9E2EsEs/er052mVpyMrQIKWRa8G5qAP6Kiuk8mm5uP\njkTgn/aowSfiRcny7c5MPuXmQ3qfF6hOrfearmW+Rublgc2V0tr0kWgojqlmmcO1\nIb6u6AoAttFHtvHBKWeF/kpPvDwmn6kQ7HnilFbdAoGBALLglt7EF/LdbpQDGntI\nv5gpnXGnCF5uL+5Su9AChYRg2a2F9nV8rZLxOimPCdgwaaoF653sMqVgdABfHzRU\ntCCf5jJXgMRBv0bxvrxF67R9D+xGXCwio9sjWdy7hHb8WM7NKWhMvhq6ypCF8feM\nOWafVitw5ayjGbYb3LsQZdkx\n-----END PRIVATE KEY-----\n",
-  "client_email": "tidal-tower-348213@tidal-tower-348213.iam.gserviceaccount.com",
-  "client_id": "114381934120602765571",
-  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
-  "token_uri": "https://oauth2.googleapis.com/token",
-  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
-  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/tidal-tower-348213%40tidal-tower-348213.iam.gserviceaccount.com"
-}
+
