@@ -1,6 +1,6 @@
 # Case Study:  How Does a Bike-Share Navigate Speedy Success
 
-## This capstone case study is related to the analysis of trends on riders for a bike-share service based discriminated by casual riders and members,  with more than 5 million ride entries. 
+## This capstone case study is related to the analysis of trends on riders for a bike-share service discriminated by casual riders and members,  with more than 5 million ride entries. 
 
 ### Please refer to the presentation for the Capstone Project for the Google Data Analytics Professional Certificate: "Captsone Project Googla Data Analytics.pptx"
 ### The case introduction is on the file "Case-Study-Bike Rides.pdf"
