@@ -1,6 +1,6 @@
 # Case Study:  How Does a Bike-Share Navigate Speedy Success
 
-![AVATAR](https://bit.ly/37tdn8O)
+![AVATAR](https://github.com/IbraTebas/Case-Study-How-Does-a-Bike-Share-Navigate-Speedy-Success/blob/e38475aa0201b28fac1d51603d32ae0933217b49/VIS/bikes.png)
 
 ## This capstone case study is related to the analysis of trends on riders for a bike-share service discriminated by casual riders and members,  with more than 5 million ride entries. 
 
