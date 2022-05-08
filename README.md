@@ -6,7 +6,7 @@
 
 ### Please refer to the presentation for the Capstone Project for the Google Data Analytics Professional Certificate: "Captsone Project Googla Data Analytics.pptx"
 ### The case introduction is on the file "Case-Study-Bike Rides.pdf"
-### To access the files in CSV format, please follow the following link: https://bit.ly/39E7B4J
+### To access the files in CSV format, please follow this link: https://bit.ly/39E7B4J
 ![AVATAR](https://github.com/IbraTebas/Case-Study-How-Does-a-Bike-Share-Navigate-Speedy-Success/blob/f5499320f1d3cb1d38fba64311f508ca2b772dca/VIS/Data_table.png)
 
 
